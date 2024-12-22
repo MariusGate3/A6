@@ -5,7 +5,7 @@ struct node;
 struct leaf { int count_zero; int count_one; };
 struct interior { struct node* zero; struct node* one; };
 struct node {
-  int bit_pos;
+  int bit_pos = 1;
   int number;
   union { struct leaf leaf; struct interior interior; };
 };
@@ -36,9 +36,7 @@ void add_number(int number) {
     if (nptr == NULL) {
       // subtree does not exist. create a leaf:
       nptr = allocate(sizeof(struct node));
-      *parent = nptr;
-      nptr->bit_pos = 1;
-      nptr->number = number;
+      *parent = nptr;      nptr->number = number;
       nptr->leaf.count_zero = (number & 1) == 0;
       nptr->leaf.count_one = (number & 1) == 1;
       return;
