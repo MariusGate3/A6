@@ -10,3 +10,6 @@ PYTHON = python3 # or just 'python' on some platforms
 	$(PYTHON) ./objdump.py -s -w $< > $@
 	$(PYTHON) ./objdump.py -S $< >> $@
 
+clean:
+	rm -f *.riscv *.dis
+	rm -rf datasets
