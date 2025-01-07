@@ -71,6 +71,4 @@ done
 average_improvement=$(echo "scale=4; $total_improvement / $test_count" | bc)
 echo -e "${CYAN}${BOLD}Average Percentage Improvement: ${average_improvement}%${RESET}"
 
-echo -e "${BLUE}${BOLD}Tests completed. Check results above for performance comparison.${RESET}"
-
 exit 0
