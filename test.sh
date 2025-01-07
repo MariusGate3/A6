@@ -40,7 +40,7 @@ test_count=0
 
 for dataset in a b c; do
   INPUT_FILE="$DATASET_DIR/$dataset.in"
-  REF_OUTPUT="$DATASET_DIR/$dataset.out"
+  REF_OUTPUT="$DATASET_DIR/$dataset.ref"
   TEST_OUTPUT="$DATASET_DIR/$dataset.new.out"
 
   echo -e "${BLUE}Testing with Dataset $dataset...${RESET}"
